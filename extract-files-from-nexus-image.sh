@@ -17,9 +17,9 @@
 
 export VENDOR=motorola
 export DEVICE=shamu
-export BUILD=nbd91p
-export FACTORY_URL=https://dl.google.com/dl/android/aosp/shamu-nbd91p-factory-987282ff.zip
-export FACTORY_SHA256=987282ffca6918cf82585b040d6e3dccf4895b9241a23d807925c56adbb179a3
+export BUILD=nbd91u
+export FACTORY_URL=https://dl.google.com/dl/android/aosp/shamu-nbd91u-factory-1aca1562.zip
+export FACTORY_SHA256=1aca15622a90922a37a8b0071c60edabe241e72303c23219ce9d4f1e5a67f6a1
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
