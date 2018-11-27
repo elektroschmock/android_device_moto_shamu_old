@@ -113,7 +113,21 @@ MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 
 # Recovery
 LZMA_RAMDISK_TARGETS := recovery
+ifeq ($(WITH_TWRP),true)
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_FSTAB = device/moto/shamu/rootdir/etc/fstab.twrp
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_TWRPAPP :=true
+TW_INCLUDE_CRYPTO := true
+TW_SCREEN_BLANK_ON_BOOT := true
+TW_THEME := portrait_hdpi
+TW_USE_TOOLBOX := true
+else
 TARGET_RECOVERY_FSTAB = device/moto/shamu/rootdir/etc/fstab.shamu
+endif
 
 # RIL
 # Support Native Layer RF cutback
