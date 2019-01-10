@@ -26,6 +26,7 @@ on early-init
 
 on init
     # We are mounting system(/vendor) early
+    start logd
     start servicemanager
     start hwservicemanager
     start vndservicemanager
